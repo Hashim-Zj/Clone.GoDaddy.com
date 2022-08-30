@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 2000px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* NAVBAR */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 93px;
+
+}
+
+.header .header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 65px;
+  width: 90%;
+
+}
+
+.first-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  width: 1200px;
+
+}
+
+.left-logo {
+  padding: 0px;
+  position: absolute;
+  padding-right: 10px;
+  width: 233px;
+  background-color: #fff;
+
+}
+
+.godaddy-image {
+  height: 40px;
+  cursor: pointer;
+}
+
+.cuntry-name {
+  position: relative;
+  top: 13px;
+  left: -25px;
+  font-size: 9px;
+  color: #111111;
+  opacity: 0.25px;
+  cursor: pointer;
+}
+
+nav {
+  margin-left: 200px;
+  width: 700px;
+}
+
+.nave-items li {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.nav-link {
+  list-style: none;
+  margin-left: 3px;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #111111;
+  opacity: 50%;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.nav-link:hover {
+  opacity: 80%;
+}
+
+.second-section {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.nav-text {
+  font-size: 16px;
+  color: #111111;
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.ut-nav:hover {
+  text-decoration: underline;
+  opacity: 80%;
+}
+
+.ico {
+  color: #111111;
+  font-size: 30px;
+  margin-left: -24px;
+  font-weight: 200;
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.ico-sh {
+  margin-right: 10px;
+  font-size: 30px;
+  font-weight: 200;
+  opacity: 80%;
+  cursor: pointer;
+}
+
+
+
+/* MAIN BODY */
+.bg-pink {
+  background-color: #FDE9DB;
+  height: 455px;
+  width: 100%;
+  padding: 10px, 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.first-body-section {
+  height: 100%;
+}
+
+.heading {
+  margin: 0;
+  width: 1875px;
+  text-align: center;
+  padding-top: 130px;
+
+}
+
+.head-text {
+  font-size: 38.5px;
+  font-weight: 800;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 10px;
+}
+
+#h2 {
+  font-weight: 400;
+  line-height: 10px;
+
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.input-search {
+  height: 28px;
+  width: 75%;
+  border-radius: 0%;
+  padding: 16px 0px 16px 20px;
+  border: none;
+  background-color: #FFF;
+}
+
+.input-search::placeholder {
+  font-size: 18px;
+  color: #111111;
+  opacity: 70%;
+}
+
+.input-search:focus {
+  outline: none;
+  border: 3px solid #1976d2;
+}
+
+.btn-search {
+  background-color: #111111;
+  width: 120px;
+  height: 58px;
+  border: none;
+  transform: background-color 0.5s;
+  cursor: pointer;
+
+}
+
+.btn-search:hover {
+  background-color: #09757A;
+  width: 123px;
+  height: 59px;
+}
+
+.search {
+  font-size: 16px;
+  color: #FFF;
+  font-weight: 800;
+  cursor: pointer;
+
+}
+
+.text-p {
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #111111;
+}
+
+.section-2 {
+  margin: 50px 0px 0px 0px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.head-2 {
+  text-align: center;
+}
+.heading-2{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 52px;
+  color: #111111;
+  margin: 0px 0px 8px 0px;
+
+}
+#setence {
+  font-weight: 300;
+  color: #111111;
+  font-size: 14px;
+}
+.grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr ifr;
+  grid-column-gap: 100px;
+
+}
