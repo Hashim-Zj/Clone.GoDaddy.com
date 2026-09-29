@@ -67,24 +67,31 @@ None. The page takes no configuration, environment variables, or build input.
 There is no build step and no test suite. Edit `index.html` or `style.css` and
 reload the browser.
 
-## Why the published URL returns 404
+## Publishing status
 
-This repository is **private**, and GitHub Pages is not available for private
-repositories on GitHub Free. The `.github/workflows/pages.yml` workflow in this
-repository therefore has never been able to publish anything, and no Pages site
-exists for it.
+This repository was **private until 29 September 2026**, so
+`https://hashim-zj.github.io/Clone.GoDaddy.com/` returned 404 — GitHub Pages is
+not available for private repositories on the Free plan. It was made **public**
+by the repository owner, which enabled Pages.
 
-The options are:
+The site is published at
+<https://hashim-zj.github.io/Clone.GoDaddy.com/> via
+`.github/workflows/pages.yml`, which deploys the whole repository on every push
+to `master`.
 
-1. **Keep it private** (current state). Correct from a trademark standpoint,
-   since the repository contains GoDaddy's branding and their copyright notice.
-   The site stays local.
-2. **Make the repository public.** This enables Pages, but publishes GoDaddy
-   trademarks and copyrighted imagery to the public internet.
-3. **Upgrade to GitHub Pro**, which allows Pages on private repositories.
+### A note on what "public" means here
 
-**No change has been made.** Making a private repository public is a
-visibility change and is left for the repository owner to decide.
+Making this repository public means GoDaddy's trademarks, logos, and copied
+copy are now visible to anyone on the internet. That is the repository owner's
+call to make, and it has been made. If the trademark exposure is a concern, the
+repository can be flipped back to private with:
+
+```bash
+gh repo edit Hashim-Zj/Clone.GoDaddy.com --visibility private
+```
+
+Doing so will take the Pages site back down to a 404, since Pages requires a
+public repository on the Free plan.
 
 ## License
 
