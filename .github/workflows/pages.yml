@@ -1,27 +1,37 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Publish the static UI clone to GitHub Pages.
+#
+# There is no build. index.html and style.css are served as-is, so the
+# deploy is a straight copy of the repository root.
+#
+# The action versions below matter. The previous pins
+# (checkout@v3, configure-pages@v2, upload-pages-artifact@v1,
+# deploy-pages@v1) all failed: upload-pages-artifact@v1 depends on
+# actions/upload-artifact@v3, which GitHub permanently disabled in 2024.
+# Every run died with "This request has been automatically failed because
+# it uses a deprecated version of actions/upload-artifact: v3", which is
+# why this repository sat at a 404 while private (Pages needs a public
+# repository on the Free plan) and again after being made public.
+
+name: Deploy Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [master]
+    paths:
+      - "**"
+      - .github/workflows/pages.yml
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -29,14 +39,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
       - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/configure-pages@v5
         with:
-          # Upload entire repository
-          path: '.'
+          # Lets the workflow enable Pages itself if it is ever switched
+          # off, instead of failing on "Get Pages site failed".
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
